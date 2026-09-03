@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Application Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Application Manager</h1>
+
+        <section class="student-summary" aria-live="polite">
+            <p id="studentCount">Total Students: 0</p>
+        </section>
+
+        <form id="studentForm">
+
+            <div class="form-group">
+                <label for="studentName">Student Name</label>
+                <input
+                    type="text"
+                    id="studentName"
+                    name="studentName"
+                >
+                    <span class="error" id="studentNameError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                >
+                <span class="error" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                    type="text"
+                    id="phone"
+                    name="phone"
+                >
+                <span class="error" id="phoneError"></span>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input
+                    type="date"
+                    id="dob"
+                    name="dob"
+                >
+                <span class="error" id="dobError"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label>Gender</label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="gender"
+                        value="Male"
+                    >
+                    Male
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="gender"
+                        value="Female"
+                    >
+                    Female
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="gender"
+                        value="Other"
+                    >
+                    Other
+                </label>
+
+                <span class="error" id="genderError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Course</label>
+
+                <select id="course" name="course">
+                    <option value="">Select Course</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Python">Python</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                </select>
+
+                <span class="error" id="courseError"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label>Skills</label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="skills"
+                        value="HTML"
+                    >
+                    HTML
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="skills"
+                        value="CSS"
+                    >
+                    CSS
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="skills"
+                        value="JavaScript"
+                    >
+                    JavaScript
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="skills"
+                        value="Git"
+                    >
+                    Git
+                </label>
+
+                <span class="error" id="skillsError"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label for="about">About Student</label>
+
+                <textarea
+                    id="about"
+                    name="about"
+                    rows="4"
+                ></textarea>
+
+                <span class="error" id="aboutError"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label for="photo">Profile Photo</label>
+
+                <input
+                    type="file"
+                    id="photo"
+                    name="photo"
+                    accept="image/*"
+                >
+
+                <span class="error" id="photoError"></span>
+            </div>
+
+
+            <button type="submit">
+                Submit
+            </button>
+
+        </form>
+
+
+        <section class="submitted-students" aria-labelledby="submittedStudentsHeading">
+            <h2 id="submittedStudentsHeading">Submitted Students</h2>
+            <div id="studentContainer"></div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
